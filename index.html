@@ -1,22 +1,462 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CARIBE GRAIN S.A.S. | Sitio en Construcción</title>
-    <style>
-        body { font-family: Arial, sans-serif; background-color: #f4f6f8; color: #333; text-align: center; padding: 50px; }
-        .container { max-width: 600px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-        h1 { color: #2c3e50; margin-bottom: 10px; }
-        p { color: #7f8c8d; font-size: 1.1em; }
-        .badge { display: inline-block; background: #27ae60; color: #fff; padding: 8px 16px; border-radius: 4px; font-weight: bold; margin-top: 20px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10251e">
+<meta name="description" content="Caribe Grain SAS. Soluciones agroindustriales para el procesamiento, acondicionamiento y comercialización de maíz en Colombia.">
+<meta name="keywords" content="Caribe Grain, maíz, agroindustria, maíz blanco, maíz amarillo, Colombia">
+<meta property="og:title" content="Caribe Grain SAS | Agroindustria">
+<meta property="og:description" content="Conectamos el campo con la industria. Soluciones agroindustriales en maíz.">
+<meta property="og:type" content="website">
+<title>Caribe Grain SAS | Soluciones Agroindustriales</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --green:#153c2d;
+  --green-dark:#10291f;
+  --green-light:#285b43;
+  --gold:#e8b64e;
+  --cream:#f7f6f0;
+  --white:#fff;
+  --text:#25342c;
+  --muted:#718077;
+  --border:#e5e9e3;
+  --shadow:0 18px 50px rgba(16,41,31,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{font-family:'DM Sans',sans-serif;color:var(--text);background:#fff;line-height:1.65}
+a{text-decoration:none;color:inherit}
+button{font:inherit}
+.container{width:min(1160px,90%);margin:auto}
+.topbar{background:var(--green-dark);color:#dce7df;font-size:12px;padding:9px 0}
+.topbar .container{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.topbar span{display:flex;align-items:center;gap:8px}
+.navbar{height:82px;position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-inner{height:100%;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:11px}
+.logo-icon{width:43px;height:43px;border-radius:12px;background:var(--green);display:grid;place-items:center;color:var(--gold);font-size:24px}
+.logo-name{font-family:'Manrope',sans-serif;font-size:20px;font-weight:800;letter-spacing:1px;color:var(--green);line-height:1.1}
+.logo-name small{display:block;font-size:9px;letter-spacing:3px;color:var(--muted);margin-top:5px}
+.nav-links{display:flex;align-items:center;gap:30px;font-size:13px;font-weight:600}
+.nav-links a:hover{color:var(--green-light)}
+.btn{display:inline-flex;justify-content:center;align-items:center;gap:9px;padding:13px 23px;border-radius:5px;font-size:13px;font-weight:700;transition:.25s;cursor:pointer;border:0}
+.btn-primary{background:var(--gold);color:#19291f}
+.btn-primary:hover{background:#f1c969;transform:translateY(-2px)}
+.btn-outline{border:1px solid rgba(255,255,255,.55);color:#fff}
+.btn-outline:hover{background:#fff;color:var(--green)}
+.menu-toggle{display:none;background:none;border:0;font-size:26px;color:var(--green);cursor:pointer}
+.hero{background:var(--green-dark);color:#fff;position:relative;overflow:hidden;min-height:625px;display:flex;align-items:center}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,35,26,.96) 0%,rgba(12,35,26,.88) 48%,rgba(12,35,26,.35) 100%),url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=85') center/cover}
+.hero:after{content:"";position:absolute;width:520px;height:520px;border:1px solid rgba(232,182,78,.2);border-radius:50%;right:-150px;top:70px;box-shadow:0 0 0 65px rgba(232,182,78,.035),0 0 0 130px rgba(232,182,78,.025)}
+.hero-content{position:relative;z-index:2;max-width:680px;padding:100px 0}
+.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:3px;font-size:11px;font-weight:800;display:flex;align-items:center;gap:12px;margin-bottom:23px}
+.eyebrow:before{content:"";height:2px;width:32px;background:var(--gold)}
+.hero h1{font-family:'Manrope',sans-serif;font-size:clamp(42px,6vw,70px);line-height:1.09;letter-spacing:-2.5px;margin-bottom:24px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p{font-size:17px;color:#d4dfd8;max-width:550px;margin-bottom:34px}
+.hero-actions{display:flex;gap:13px;flex-wrap:wrap}
+.hero-note{margin-top:55px;display:flex;align-items:center;gap:15px;color:#d0dbd3;font-size:12px}
+.hero-note strong{color:#fff}
+.section{padding:100px 0}
+.section-heading{max-width:650px;margin-bottom:48px}
+.section-heading.center{text-align:center;margin-left:auto;margin-right:auto}
+.section-heading.center .eyebrow{justify-content:center}
+.section-heading h2{font-family:'Manrope',sans-serif;font-size:clamp(30px,4vw,44px);line-height:1.2;color:var(--green);letter-spacing:-1.3px;margin-bottom:17px}
+.section-heading p{color:var(--muted);font-size:15px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:75px;align-items:center}
+.about-visual{min-height:430px;position:relative}
+.about-photo{position:absolute;inset:0 55px 35px 0;border-radius:8px;background:url('https://images.unsplash.com/photo-1601593768799-76c1d7a4a1d1?auto=format&fit=crop&w=1000&q=85') center/cover;background-color:#d9dfd1}
+.about-card{position:absolute;right:0;bottom:0;background:var(--green);color:white;padding:27px 30px;border-radius:7px;max-width:220px;box-shadow:var(--shadow)}
+.about-card strong{font-family:'Manrope';font-size:35px;color:var(--gold);display:block}
+.about-card span{font-size:12px;color:#e0e8e2}
+.about-text h2{font-family:'Manrope';font-size:39px;line-height:1.2;color:var(--green);margin-bottom:22px}
+.about-text p{color:var(--muted);font-size:14px;margin-bottom:18px}
+.check-list{list-style:none;margin-top:25px;display:grid;gap:13px}
+.check-list li{display:flex;gap:12px;align-items:flex-start;font-size:14px;font-weight:600}
+.check{width:22px;height:22px;flex-shrink:0;background:#e8f0e9;color:var(--green);border-radius:50%;display:grid;place-items:center;font-size:12px}
+.products{background:var(--cream)}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.product-card{background:#fff;border:1px solid var(--border);border-radius:8px;overflow:hidden;transition:.3s}
+.product-card:hover{transform:translateY(-7px);box-shadow:var(--shadow)}
+.product-image{height:225px;background-size:cover;background-position:center;position:relative}
+.product-image:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(13,38,27,.25),transparent)}
+.product-number{position:absolute;z-index:1;top:17px;left:17px;background:var(--gold);color:var(--green-dark);padding:6px 11px;font-size:11px;font-weight:800;border-radius:3px}
+.product-info{padding:25px}
+.product-info h3{font-family:'Manrope';font-size:20px;color:var(--green);margin-bottom:9px}
+.product-info p{font-size:13px;color:var(--muted);margin-bottom:20px}
+.product-link{font-size:12px;font-weight:800;color:var(--green);letter-spacing:.5px}
+.product-link span{color:#c18b24;font-size:18px;margin-left:5px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:35px}
+.service{padding:28px 25px;border-left:2px solid var(--gold);background:#fbfcfa}
+.service-icon{font-size:27px;margin-bottom:18px}
+.service h3{font-family:'Manrope';color:var(--green);font-size:18px;margin-bottom:10px}
+.service p{font-size:13px;color:var(--muted)}
+.process{background:var(--green-dark);color:#fff}
+.process .section-heading h2{color:#fff}
+.process .section-heading p{color:#c1d0c6}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.process-step{padding:25px 20px;border-top:1px solid rgba(255,255,255,.25);position:relative}
+.process-step .number{font-family:'Manrope';font-size:40px;color:var(--gold);font-weight:800;margin-bottom:17px}
+.process-step h3{font-size:16px;margin-bottom:10px}
+.process-step p{font-size:12px;color:#bdccc2}
+.quality-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.quality-panel{background:var(--cream);padding:45px;border-radius:8px}
+.quality-panel h3{font-family:'Manrope';font-size:25px;color:var(--green);margin-bottom:15px}
+.quality-panel p{font-size:14px;color:var(--muted)}
+.quality-points{display:grid;gap:22px}
+.quality-point{display:flex;gap:17px}
+.quality-point .check{width:35px;height:35px;font-size:16px}
+.quality-point h4{color:var(--green);font-size:15px;margin-bottom:4px}
+.quality-point p{font-size:13px;color:var(--muted)}
+.cta{background:var(--cream);padding:75px 0}
+.cta-inner{background:var(--green);padding:55px 60px;border-radius:9px;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:35px}
+.cta h2{font-family:'Manrope';font-size:32px;line-height:1.2;margin-bottom:12px}
+.cta p{font-size:14px;color:#d2dfd6}
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:65px}
+.contact-info h2{font-family:'Manrope';font-size:39px;color:var(--green);line-height:1.2;margin-bottom:20px}
+.contact-info>p{font-size:14px;color:var(--muted);margin-bottom:30px}
+.contact-detail{display:flex;gap:15px;margin-bottom:23px}
+.contact-icon{width:43px;height:43px;border-radius:6px;background:#edf3ed;display:grid;place-items:center;color:var(--green);font-size:19px;flex-shrink:0}
+.contact-detail strong{display:block;font-size:13px;color:var(--green)}
+.contact-detail span{font-size:13px;color:var(--muted)}
+.contact-form{padding:35px;background:#fff;border:1px solid var(--border);border-radius:8px;box-shadow:var(--shadow)}
+.contact-form h3{font-family:'Manrope';font-size:22px;color:var(--green);margin-bottom:22px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}
+.field{display:flex;flex-direction:column;gap:7px;margin-bottom:16px}
+.field.full{grid-column:1/-1}
+.field label{font-size:12px;font-weight:700;color:var(--text)}
+.field input,.field select,.field textarea{width:100%;border:1px solid var(--border);border-radius:5px;padding:12px 13px;font:13px 'DM Sans';outline:none;background:#fbfcfa}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green-light)}
+.field textarea{min-height:110px;resize:vertical}
+.contact-form .btn{width:100%;margin-top:4px}
+.form-note{font-size:11px;color:var(--muted);margin-top:12px;text-align:center}
+footer{background:#0d2119;color:#c3d1c8;padding:55px 0 22px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:50px;padding-bottom:40px}
+.footer-brand .logo-name{color:#fff}
+.footer-brand p{font-size:13px;color:#9eb0a4;margin-top:20px;max-width:310px}
+.footer-col h4{color:#fff;font-size:13px;margin-bottom:17px}
+.footer-col a{display:block;font-size:12px;color:#aebdb3;margin-bottom:10px}
+.footer-col a:hover{color:var(--gold)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:20px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:11px;color:#879b8e}
+.whatsapp-float{position:fixed;bottom:23px;right:23px;z-index:999;width:55px;height:55px;border-radius:50%;background:#20b96b;color:#fff;display:grid;place-items:center;font-size:25px;box-shadow:0 6px 20px #0003;transition:.2s}
+.whatsapp-float:hover{transform:scale(1.08)}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:850px){
+ .nav-links{gap:15px;font-size:12px}
+ .about-grid,.quality-grid{gap:35px}
+ .product-grid{grid-template-columns:repeat(2,1fr)}
+ .services-grid{grid-template-columns:repeat(2,1fr)}
+ .process-grid{grid-template-columns:repeat(2,1fr)}
+ .contact-grid{gap:35px}
+}
+@media(max-width:650px){
+ .topbar .container{justify-content:center}
+ .navbar{height:72px}
+ .menu-toggle{display:block}
+ .nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;padding:24px 5%;border-bottom:1px solid var(--border);flex-direction:column;align-items:stretch;gap:19px}
+ .nav-links.open{display:flex}
+ .nav-links .btn{width:100%}
+ .hero{min-height:580px}
+ .hero-content{padding:80px 0}
+ .hero h1{letter-spacing:-1.5px}
+ .hero p{font-size:15px}
+ .hero-note{margin-top:38px}
+ .section{padding:70px 0}
+ .about-grid,.quality-grid,.contact-grid{grid-template-columns:1fr}
+ .about-visual{min-height:330px;order:2}
+ .about-text h2,.contact-info h2{font-size:32px}
+ .product-grid,.services-grid,.process-grid{grid-template-columns:1fr}
+ .product-image{height:230px}
+ .quality-panel{padding:28px}
+ .cta-inner{padding:35px 25px;align-items:flex-start;flex-direction:column}
+ .cta h2{font-size:27px}
+ .form-grid{grid-template-columns:1fr}
+ .field.full{grid-column:auto}
+ .contact-form{padding:24px 19px}
+ .footer-grid{grid-template-columns:1fr;gap:30px}
+ .footer-bottom{flex-direction:column}
+}
+</style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>CARIBE GRAIN S.A.S.</h1>
-        <p>Procesamiento y distribución agroindustrial de maíz.</p>
-        <div class="badge">Sitio Web en Construcción</div>
+<div class="topbar">
+ <div class="container">
+  <span>🌽 Soluciones agroindustriales en Colombia</span>
+  <span>Calidad · Procesamiento · Comercialización</span>
+ </div>
+</div>
+
+<header class="navbar">
+ <div class="container nav-inner">
+  <a href="#inicio" class="logo">
+   <div class="logo-icon">🌽</div>
+   <div class="logo-name">CARIBE GRAIN<small>S.A.S. · AGROINDUSTRIA</small></div>
+  </a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+  <nav class="nav-links" id="navLinks">
+   <a href="#inicio">Inicio</a>
+   <a href="#nosotros">Nosotros</a>
+   <a href="#productos">Productos</a>
+   <a href="#servicios">Servicios</a>
+   <a href="#calidad">Calidad</a>
+   <a href="#contacto" class="btn btn-primary">Contáctanos ↗</a>
+  </nav>
+ </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+ <div class="container">
+  <div class="hero-content">
+   <div class="eyebrow">Agroindustria · Colombia</div>
+   <h1>Del campo a la industria, <em>con calidad.</em></h1>
+   <p>En Caribe Grain conectamos la producción agrícola con las necesidades de la industria alimentaria mediante soluciones de procesamiento y comercialización de maíz.</p>
+   <div class="hero-actions">
+    <a href="#productos" class="btn btn-primary">Conoce nuestros productos ↗</a>
+    <a href="#nosotros" class="btn btn-outline">Conócenos</a>
+   </div>
+   <div class="hero-note"><strong>CARIBE GRAIN S.A.S.</strong> <span>Comprometidos con el desarrollo agroindustrial.</span></div>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="nosotros">
+ <div class="container about-grid">
+  <div class="about-visual reveal">
+   <div class="about-photo"></div>
+   <div class="about-card"><strong>CG</strong><span>Caribe Grain<br>Soluciones agroindustriales</span></div>
+  </div>
+  <div class="about-text reveal">
+   <div class="eyebrow">Quiénes somos</div>
+   <h2>Impulsamos el valor del maíz en la cadena productiva.</h2>
+   <p>Caribe Grain S.A.S. es una empresa orientada al sector agroindustrial, enfocada en el procesamiento y comercialización de maíz y sus derivados.</p>
+   <p>Buscamos construir relaciones comerciales sólidas con productores, proveedores y clientes industriales, aportando soluciones confiables a cada etapa de la cadena.</p>
+   <ul class="check-list">
+    <li><span class="check">✓</span> Enfoque en el sector agroindustrial.</li>
+    <li><span class="check">✓</span> Atención a las necesidades del mercado.</li>
+    <li><span class="check">✓</span> Relaciones comerciales de largo plazo.</li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<section class="section products" id="productos">
+ <div class="container">
+  <div class="section-heading center reveal">
+   <div class="eyebrow">Nuestro portafolio</div>
+   <h2>Productos para la industria</h2>
+   <p>Soluciones derivadas del procesamiento de maíz, orientadas a atender las necesidades de clientes y empresas del sector alimentario.</p>
+  </div>
+  <div class="product-grid">
+   <article class="product-card reveal">
+    <div class="product-image" style="background-image:url('https://images.unsplash.com/photo-1551754655-cd27e38d2076?auto=format&fit=crop&w=900&q=85')"><span class="product-number">01</span></div>
+    <div class="product-info">
+     <h3>Maíz blanco</h3>
+     <p>Materia prima para procesos de transformación y elaboración de productos alimenticios.</p>
+     <a href="#contacto" class="product-link">SOLICITAR INFORMACIÓN <span>→</span></a>
     </div>
+   </article>
+   <article class="product-card reveal">
+    <div class="product-image" style="background-image:url('https://images.unsplash.com/photo-1601593768799-76c1d7a4a1d1?auto=format&fit=crop&w=900&q=85')"><span class="product-number">02</span></div>
+    <div class="product-info">
+     <h3>Maíz amarillo</h3>
+     <p>Alternativa de abastecimiento para diferentes aplicaciones y procesos agroindustriales.</p>
+     <a href="#contacto" class="product-link">SOLICITAR INFORMACIÓN <span>→</span></a>
+    </div>
+   </article>
+   <article class="product-card reveal">
+    <div class="product-image" style="background-image:url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=85')"><span class="product-number">03</span></div>
+    <div class="product-info">
+     <h3>Subproductos</h3>
+     <p>Valorización y aprovechamiento de subproductos obtenidos durante el procesamiento del grano.</p>
+     <a href="#contacto" class="product-link">SOLICITAR INFORMACIÓN <span>→</span></a>
+    </div>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="servicios">
+ <div class="container">
+  <div class="section-heading reveal">
+   <div class="eyebrow">Qué hacemos</div>
+   <h2>Soluciones a lo largo de la cadena agroindustrial</h2>
+   <p>Integramos actividades orientadas a facilitar el abastecimiento y transformación de materias primas agrícolas.</p>
+  </div>
+  <div class="services-grid">
+   <article class="service reveal"><div class="service-icon">⚙️</div><h3>Procesamiento</h3><p>Transformación y acondicionamiento del grano mediante operaciones agroindustriales.</p></article>
+   <article class="service reveal"><div class="service-icon">🌾</div><h3>Abastecimiento</h3><p>Gestión comercial de materias primas agrícolas para atender requerimientos de clientes.</p></article>
+   <article class="service reveal"><div class="service-icon">📦</div><h3>Comercialización</h3><p>Oferta de productos y subproductos para diferentes segmentos del mercado.</p></article>
+   <article class="service reveal"><div class="service-icon">🚚</div><h3>Gestión logística</h3><p>Coordinación de operaciones de suministro y distribución según las necesidades comerciales.</p></article>
+   <article class="service reveal"><div class="service-icon">🔍</div><h3>Control del proceso</h3><p>Atención a las condiciones del producto durante las diferentes etapas de operación.</p></article>
+   <article class="service reveal"><div class="service-icon">🤝</div><h3>Relaciones comerciales</h3><p>Construcción de alianzas con proveedores y compradores del sector agroindustrial.</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="section process">
+ <div class="container">
+  <div class="section-heading reveal">
+   <div class="eyebrow">Nuestra operación</div>
+   <h2>Una cadena de trabajo integrada</h2>
+   <p>Un enfoque organizado para conectar la materia prima con las necesidades de nuestros clientes.</p>
+  </div>
+  <div class="process-grid">
+   <div class="process-step reveal"><div class="number">01</div><h3>Recepción</h3><p>Ingreso de materia prima y revisión de las condiciones del grano.</p></div>
+   <div class="process-step reveal"><div class="number">02</div><h3>Acondicionamiento</h3><p>Preparación del producto para las operaciones de procesamiento.</p></div>
+   <div class="process-step reveal"><div class="number">03</div><h3>Procesamiento</h3><p>Transformación del grano y separación de los productos resultantes.</p></div>
+   <div class="process-step reveal"><div class="number">04</div><h3>Despacho</h3><p>Preparación y coordinación de la entrega al cliente.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="calidad">
+ <div class="container quality-grid">
+  <div class="quality-panel reveal">
+   <div class="eyebrow">Nuestro compromiso</div>
+   <h3>La confianza comienza con cada operación.</h3>
+   <p>Trabajamos con una visión orientada a la mejora de los procesos, el cumplimiento de los requerimientos comerciales y el aprovechamiento responsable de las materias primas.</p>
+  </div>
+  <div class="quality-points reveal">
+   <div class="section-heading" style="margin-bottom:10px">
+    <div class="eyebrow">Calidad y confianza</div>
+    <h2>Compromiso en cada etapa</h2>
+   </div>
+   <div class="quality-point"><span class="check">✓</span><div><h4>Atención al producto</h4><p>Seguimiento de las condiciones de la materia prima y del producto procesado.</p></div></div>
+   <div class="quality-point"><span class="check">✓</span><div><h4>Procesos organizados</h4><p>Orientación hacia operaciones eficientes y consistentes.</p></div></div>
+   <div class="quality-point"><span class="check">✓</span><div><h4>Relaciones transparentes</h4><p>Comunicación clara con proveedores, aliados y clientes.</p></div></div>
+  </div>
+ </div>
+</section>
+
+<section class="cta">
+ <div class="container">
+  <div class="cta-inner reveal">
+   <div><h2>¿Buscas un aliado agroindustrial?</h2><p>Conversemos sobre tus necesidades de abastecimiento y procesamiento de maíz.</p></div>
+   <a href="#contacto" class="btn btn-primary">Hablemos de negocios ↗</a>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="contacto">
+ <div class="container contact-grid">
+  <div class="contact-info reveal">
+   <div class="eyebrow">Contacto comercial</div>
+   <h2>Construyamos nuevas oportunidades.</h2>
+   <p>Estamos interesados en conocer tus necesidades y explorar oportunidades de negocio en el sector agroindustrial.</p>
+   <div class="contact-detail"><div class="contact-icon">📍</div><div><strong>Ubicación</strong><span>Colombia</span></div></div>
+   <div class="contact-detail"><div class="contact-icon">✉️</div><div><strong>Correo comercial</strong><span>Completar correo empresarial</span></div></div>
+   <div class="contact-detail"><div class="contact-icon">📞</div><div><strong>Atención comercial</strong><span>Contáctanos mediante el formulario</span></div></div>
+  </div>
+  <form class="contact-form reveal" id="contactForm">
+   <h3>Envíanos tu consulta</h3>
+   <div class="form-grid">
+    <div class="field"><label for="name">Nombre completo</label><input id="name" name="name" required placeholder="Tu nombre"></div>
+    <div class="field"><label for="company">Empresa</label><input id="company" name="company" placeholder="Nombre de tu empresa"></div>
+    <div class="field"><label for="email">Correo electrónico</label><input id="email" name="email" type="email" required placeholder="correo@empresa.com"></div>
+    <div class="field"><label for="phone">Teléfono</label><input id="phone" name="phone" type="tel" placeholder="Tu número de contacto"></div>
+    <div class="field full"><label for="subject">Motivo de contacto</label>
+     <select id="subject" name="subject">
+      <option>Compra de maíz blanco</option>
+      <option>Compra de maíz amarillo</option>
+      <option>Compra de subproductos</option>
+      <option>Servicios de procesamiento</option>
+      <option>Propuesta comercial</option>
+      <option>Otro asunto</option>
+     </select>
+    </div>
+    <div class="field full"><label for="message">Mensaje</label><textarea id="message" name="message" required placeholder="Cuéntanos qué necesitas..."></textarea></div>
+   </div>
+   <button type="submit" class="btn btn-primary">Enviar consulta por WhatsApp ↗</button>
+   <p class="form-note">Al enviar, se abrirá WhatsApp con los datos de tu consulta.</p>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="container">
+  <div class="footer-grid">
+   <div class="footer-brand">
+    <a href="#inicio" class="logo"><div class="logo-icon">🌽</div><div class="logo-name">CARIBE GRAIN<small>S.A.S. · AGROINDUSTRIA</small></div></a>
+    <p>Conectamos el campo con la industria a través de soluciones agroindustriales en maíz.</p>
+   </div>
+   <div class="footer-col"><h4>NAVEGACIÓN</h4><a href="#inicio">Inicio</a><a href="#nosotros">Nosotros</a><a href="#productos">Productos</a><a href="#servicios">Servicios</a></div>
+   <div class="footer-col"><h4>CONTACTO</h4><a href="#contacto">Contacto comercial</a><a href="#calidad">Calidad</a><a href="#contacto">Solicitar cotización</a></div>
+  </div>
+  <div class="footer-bottom">
+   <span>© <span id="year"></span> CARIBE GRAIN S.A.S. Todos los derechos reservados.</span>
+   <span>Soluciones agroindustriales · Colombia</span>
+  </div>
+ </div>
+</footer>
+
+<a href="#contacto" class="whatsapp-float" aria-label="Ir a contacto">✉</a>
+
+<script>
+// CONFIGURACION: reemplaza el numero por el WhatsApp empresarial.
+// Formato internacional, solo numeros. Ejemplo Colombia: 573001234567.
+const WHATSAPP_NUMBER = "57XXXXXXXXXX";
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("open");
+  menuToggle.textContent = navLinks.classList.contains("open") ? "×" : "☰";
+});
+
+navLinks.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+    menuToggle.textContent = "☰";
+  });
+});
+
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  if (WHATSAPP_NUMBER.includes("X")) {
+    alert("Primero configura el numero de WhatsApp empresarial en el codigo de la pagina.");
+    return;
+  }
+
+  const data = new FormData(this);
+  const message = [
+    "Hola, Caribe Grain SAS.",
+    "",
+    "Quiero realizar una consulta comercial:",
+    "Nombre: " + data.get("name"),
+    "Empresa: " + (data.get("company") || "No indicada"),
+    "Correo: " + data.get("email"),
+    "Telefono: " + (data.get("phone") || "No indicado"),
+    "Asunto: " + data.get("subject"),
+    "Mensaje: " + data.get("message")
+  ].join("\n");
+
+  window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message), "_blank");
+});
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
+    }
+  });
+}, {threshold:0.12});
+
+document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
